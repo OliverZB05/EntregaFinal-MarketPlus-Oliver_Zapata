@@ -28,7 +28,7 @@ const ItemDetail = ({product}) => {
     const decrement = () => {
         if(count === 1){
             swal({
-                title: "Llegaste al límite productos",
+                title: "Llegaste al límite de stock del producto",
                 icon: 'info'
             });
             return;

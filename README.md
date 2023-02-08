@@ -60,9 +60,9 @@ Se encuentran en la ruta "./src/adapters", en este proyecto solo hay un adaptado
 ##  Estilos de la web
 Los estilos de la página están hechos mediante SASS, el cual se puede instalar en las dependencias de la página.
 
-- # 1. Dato importante: algunos componentes tienen en su carpeta hojas de estilos ".scss" las cuales tienen el estilo de cada componente y todos esos estilos se muestrán en la página mediante el archivo "style.scss" encontrado en la ruta "./src/SASS" y que posee los estilos generales de la página.
+- #### 1. Dato importante: algunos componentes tienen en su carpeta hojas de estilos ".scss" las cuales tienen el estilo de cada componente y todos esos estilos se muestrán en la página mediante el archivo "style.scss" encontrado en la ruta "./src/SASS" y que posee los estilos generales de la página.
 
-- # 2. Dato importante: en la carpeta SASS ubicada en "./src/SASS" también se podra ver un archivo llamada "_vars.scss", el cual contiene los mixins y maps (herramientas de SASS) de cada cada hoja de estilos, es decir que todas las hojas de estilos de todos los componentes que las contienen importan los mixins y maps del archivo "_vars.scss".
+- #### 2. Dato importante: en la carpeta SASS ubicada en "./src/SASS" también se podra ver un archivo llamada "_vars.scss", el cual contiene los mixins y maps (herramientas de SASS) de cada cada hoja de estilos, es decir que todas las hojas de estilos de todos los componentes que las contienen importan los mixins y maps del archivo "_vars.scss".
 
 
 ## Manejo de interfaz

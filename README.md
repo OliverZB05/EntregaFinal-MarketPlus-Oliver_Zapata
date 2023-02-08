@@ -60,3 +60,6 @@ Los estilos de la página están hechos mediante SASS, el cual se puede instalar
 
 
 ## Manejo de interfaz
+
+- ### Filtrado de productos
+![Filtrado de productos](https://user-images.githubusercontent.com/106617284/217620950-d2dd8a10-adc4-408e-bd3f-2bc39bf5cea5.gif)

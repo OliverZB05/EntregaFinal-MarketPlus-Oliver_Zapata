@@ -1,0 +1,18 @@
+@import "../../SASS/vars";
+
+.CheckountContainer{
+    height: auto;
+    width: 100%;
+
+
+    .CheckountSubContainer{
+        height: 72vh;
+        width: 100%;
+
+        .CheckountSubContainer__FlexContainer1{
+            display: flex;
+            justify-content: center;
+
+        }
+    }
+}

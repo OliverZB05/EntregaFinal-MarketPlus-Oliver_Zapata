@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# MarketPlus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introducción
+Este es un proyecto Ecommerce hecho en React en el cual se puede tener una buena interacción de usuario con una gran variedad de lógica de programación como pueden ser:
+- Almacenamiento de productos en un carrito de compras
+- Manejo de cantidad, precio, stock y categorías de cada producto
+- Buena navegabilidad entre componentes
+- Lógica para enviar una orden de compra que se recibe desde firestore, sección perteneciente al servicio de firebase, entre otras funcionalidades.
 
-## Available Scripts
+Principalmente este proyecto fue realizado con la finalidad de simular una página Ecommerce de compras online como y brindar al usuario la expeciencia de escoger un producto de su agrado y configurando a su preferencia el manejo de sus productos elegidos, con una interfaz fácil de entender y atajos que hacen más fácil el trabajo de interacción para el cliente.
 
-In the project directory, you can run:
 
-### `npm start`
+## Como iniciar el proyecto
+- Clonar el repositorio
+- Instalar las dependencias presentes en el archivo "package.json" en la ruta "./package.json"
+- Configurar variables de entorno presentes en el archivo "env" (archivo privado)
+- Ejecutar el comando de consola npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Información de la funcionalidad del proyecto
+En el archivo "App.jsx" en la ruta "./src/App.jsx" se puede ver la estructura principal de la página web, mostrando las importaciones más destacadas y de mayor importancia y el manejo de rutas de la aplicación hecho mediante react-router-dom. Algunos componentes a destacar de la web son:
 
-### `npm test`
+- ### ItemListContainer y ItemDetailContainer
+Se encargan del filtrado de productos, ItemListContainer para varios productos y filtrar por categorías e ItemDetailContainer para el producto seleccionado en la compra.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ### CartProvider y CheckoutProvider
+Estás funciones vienen son importadas desde contexts que contiene la web en la carpeta context (ubicada en la ruta "./src/components/Context"), cada uno de ellos cumplen diferentes papeles en diferentes áreas.
 
-### `npm run build`
+- CartProvider
+Se encarga del manejo del "ShoppingCart.jsx", archivo en donde se encuentra la lógica del carrito de compras.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- CheckoutProvider
+Cumple un papel importante en el manejo del "Checkout.jsx", archivo donde está la lógica de enviar la orden de compra.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ### Hooks personalizados
+El proyecto contiene hooks personalizados que cumplen la función de optimizar y facilitar la legibilidad del código y cumpliendo un papel importante en el mismo, entre ellos están:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- useAsync
+Cumple un papel fundamental en al filtrar y mostrar de productos,
 
-### `npm run eject`
+- useTitle
+Este es para cambiar el título de la página dependiendo de en que ruta se encuentre el usuario.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ### Servicios
+La configuración de los servicios más usados (firebase y firestore) se encuentra en la ruta "./src/services". En el documento "FirebaseConfig.jsx" se podrán poner las variables de entorno para así visualizar los productos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- ### Adaptadores
+Se encuentran en la ruta "./src/adapters", en este proyecto solo hay un adaptador que es "productAdapter.jsx" que se encarga de traer solo los datos más importantes de los productos almacenados en el backend de firebase.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- ### Dato importante: algunos componentes pueden tener subcomponentes o "subcomponents" los cuales son componentes hijos del componente principal y que pueden ser imporntantes para que funcione la web.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##  Estilos de la web
+Los estilos de la página están hechos mediante SASS, el cual se puede instalar en las dependencias de la página.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ### 1. Dato importante: algunos componentes tienen en su carpeta hojas de estilo ".scss" las cuales tienen el estilo de cada componente y todas las rutas de esos estilos se muestrán en la página mediante el archivo "style.scss" encontrado en la ruta "./src/SASS".
 
-### Code Splitting
+- ### 2. Dato importante: en la carpeta ubicada en "./src/SASS" también se podra ver una carpeta llamada "_vars.scss", la cual contiene los mixins y maps de cada cada hoja de estilos, es decir que todas las hojas de estilos de todos los componentes que las contienen importan los mixins y maps del archivo "_vars.scss".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Manejo de interfaz

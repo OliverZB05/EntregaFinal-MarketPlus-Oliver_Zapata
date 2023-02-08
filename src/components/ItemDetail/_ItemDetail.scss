@@ -1,0 +1,354 @@
+@import "../../SASS/vars";
+
+.ContainerDetail{
+    height: 669px;
+    width: 100%;
+    background-image: linear-gradient(to top, rgb(155, 175, 208), rgb(220, 223, 231) 80%);
+    display: grid;
+    grid-template-areas: 
+    " ContainerDetail__Section1"
+    " ContainerDetail__Section2"
+    " ContainerDetail__Section3";
+    grid-template-rows: 1fr 5fr 1fr;
+
+    .ContainerDetail__Section1{
+        grid-area: ContainerDetail__Section1;
+        background-color: map-get($ItemDetail, ContainerDetail__Section1and3);
+    }
+
+
+    .ContainerDetail__Section2{
+        grid-area: ContainerDetail__Section2;
+        background-color: map-get($ItemDetail, ContainerDetail__Section2);
+        display: flex;
+        justify-content: center;
+
+        //==========={ Estilos de la tarjeta de presentación del producto }===========
+        .Section2__ContainerAlert{
+            height: 550px;
+            width: 700px;
+            border-radius: 30px;
+            background-color: map-get($ItemDetail, ContainerAlerts);
+            margin-top: 30px;
+            border: solid black 3px;
+            display: grid;
+            grid-template-areas: 
+            " ContainerAlert__Row1"
+            " ContainerAlert__Row2"
+            " ContainerAlert__Row3"
+            " ContainerAlert__Row4";
+            grid-template-rows: 1fr 3fr 1fr 150px;
+
+            //==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+            .ContainerAlert__Row1{
+                grid-area: ContainerAlert__Row1;
+                background-color: map-get($ItemDetail, Rows1and3);
+                display: flex;
+                justify-content: center;
+                background-image: linear-gradient(to bottom, rgba(64, 65, 67, 0.574), rgba(67, 65, 65, 0.38) 60%);
+                border: solid black;
+                border-top: 3px;
+                border-left: 0px;
+                border-right: 0px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+
+                .Row1__NameProduct{
+                    position: relative;
+                    top: 20px;
+                    color: rgb(255, 255, 255);
+                    text-shadow: 2px 3px 3px rgba(70, 71, 72, 0.76);
+                }
+            }
+            //==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+
+
+            //==========={ 𝐅𝐢𝐥𝐚 𝟐 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+            .ContainerAlert__Row2{
+                grid-area: ContainerAlert__Row2;
+                background-color: map-get($ItemDetail, Rows2and4);
+                display: flex;
+                justify-content: center;
+
+                 //=============={ CardProduct }==============
+                .ContainerCards{
+                    position: relative;
+                    top: 20px; 
+
+                    .ContainerCards__CardProduct{
+                        height: 190px;
+                        width: 160px;
+                        margin-top: 13px;
+                        border-radius: 20px;
+                        background-color: rgb(194, 194, 194);
+                        display: grid;
+                        grid-template-areas: 
+                        " CardProduct__ContainerIMG";
+                        grid-template-rows: 1fr;
+
+                        .CardProduct__ContainerIMG{
+                            @include ContainerIMG;
+                            border-bottom-right-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                        }
+                }
+                }
+                //=============={ CardProduct }==============
+            }
+            //==========={ 𝐅𝐢𝐥𝐚 𝟐 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+
+
+            //==========={ 𝐅𝐢𝐥𝐚 𝟑 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+            .ContainerAlert__Row3{
+                grid-area: ContainerAlert__Row3;
+                background-color: map-get($ItemDetail, Rows1and3);
+                background-image: linear-gradient(to bottom, rgba(33, 110, 226, 0.23), rgba(68, 177, 240, 0.19) 50%);
+                border: solid black;
+                border-left: 3px;
+                border-right: 3px;
+                display: grid;
+                grid-template-areas: 
+                " Row3__Column1 Row3__Column2";
+                grid-template-columns: 1fr 1fr;
+
+                .Row3__Column1{
+                    grid-area: Row3__Column1;
+                    background-color: rgba(134, 130, 130, 0);
+                    display: grid;
+                    grid-template-areas: 
+                    " Column1__RowSection1 Column1__RowSection1"
+                    " Column1__RowSection2 Column1__RowSection2";
+                    grid-template-columns: 1fr 1fr;
+
+                    .Column1__RowSection1{
+                        grid-area: Column1__RowSection1;
+                        background-color: map-get($ItemDetail, Column1__RowSection1);
+                        display: flex;
+                        justify-content: center;
+
+                        .RowSection1__TitleGroup{
+                            @include TitlesAlert;
+                        }
+                    }
+
+                    .Column1__RowSection2{
+                        grid-area: Column1__RowSection2;
+                        background-color: map-get($ItemDetail, Column1__RowSection2);
+                        display: flex;
+                        justify-content: center;
+                        
+                        .RowSection2__TextGroup{
+                            @include TextsAlert;
+                        }
+                    }
+                }
+
+                .Row3__Column2{
+                    grid-area: Row3__Column2;
+                    background-color: rgba(199, 197, 197, 0);
+                    display: grid;
+                    grid-template-areas: 
+                    " Column2__RowSection1 Column2__RowSection1"
+                    " Column2__RowSection2 Column2__RowSection2";
+                    grid-template-columns: 1fr 1fr;
+
+                    .Column2__RowSection1{
+                        grid-area: Column2__RowSection1;
+                        background-color: map-get($ItemDetail, Column2__RowSection1);
+                        display: flex;
+                        justify-content: center;
+
+                        .RowSection1__TitlePrice{
+                            @include TitlesAlert;
+                        }
+                    }
+
+                    .Column2__RowSection2{
+                        grid-area: Column2__RowSection2;
+                        background-color: map-get($ItemDetail, Column2__RowSection2);
+                        display: flex;
+                        justify-content: center;
+
+                        .RowSection2__TextPrice{
+                            @include TextsAlert;
+                        }
+                    }
+                }
+            }
+            //==========={ 𝐅𝐢𝐥𝐚 𝟑 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+
+
+            //==========={ 𝐅𝐢𝐥𝐚 𝟒 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+            .ContainerAlert__Row4{
+                grid-area: ContainerAlert__Row4;
+                background-color: map-get($ItemDetail, Rows2and4);
+                background-image: linear-gradient(to top, rgba(33, 110, 226, 0.333), rgba(68, 177, 240, 0.19) 50%);
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                display: grid;
+                grid-template-areas: 
+                " Row4__SubRow1 Row4__SubRow1"
+                " Row4__SubRow2 Row4__SubRow2";
+                grid-template-rows: 1fr 1fr;
+                justify-content: center;
+
+                .Row4__SubRow1{
+                    grid-area: Row4__SubRow1;
+                    background-color: map-get($ItemDetail, Row4__SubRow1);
+                    display: flex;
+                    justify-content: center;
+
+                    .SubRow1__TitleQuantity{
+                        @include TitlesAlert;
+                    }
+                }
+
+                .Row4__SubRow2{
+                    grid-area: Row4__SubRow2;
+                    background-color: map-get($ItemDetail, Row4__SubRow2);
+                    display: flex;
+                    justify-content: center;
+
+                    .SubRow2__TextQuantity{
+                        font-size: 20px;
+                        position: relative;
+                        bottom: 8px;
+                    }
+
+                    .SubRow2__PlusButton{
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 10px;
+                        position: relative;
+                        bottom: 8px;
+                        left: 5px;
+                        border: solid black 2px;
+                        background-color: rgb(111, 239, 83);
+                        cursor: pointer;
+
+                        .PlusButton__Text{
+                            font-weight: bold;
+                            font-size: 17px;
+                        }
+                    }
+
+                    .SubRow2__MinusButton{
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 10px;
+                        position: relative;
+                        bottom: 8px;
+                        left: 10px;
+                        border: solid black 2px;
+                        background-color: rgb(243, 40, 40);
+                        cursor: pointer;
+
+                        .MinusButton__Text{
+                            font-weight: bold;
+                            font-size: 17px;
+                            position: relative;
+                            bottom: 1px;
+                        }
+                    }
+
+                    .SubRow2__ResetButton{
+                        height: 30px;
+                        width: 60px;
+                        border-radius: 10px;
+                        position: relative;
+                        bottom: 8px;
+                        left: 15px;
+                        border: solid black 2px;
+                        background-color: rgb(180, 176, 176);
+                        cursor: pointer;
+
+                        .ResetButton__Text{
+                            font-weight: bold;
+                            font-size: 17px;
+                            position: relative;
+                        }
+                    }
+                }
+
+                .Row4__PayButton{
+                    height: 30px;
+                    width: 90px;
+                    border-radius: 10px;
+                    position: relative;
+                    bottom: 18px;
+                    left: 26px;
+                    border: solid black 2px;
+                    background-color: rgb(132, 229, 246);
+                    cursor: pointer;
+
+                    .PayButton__Text{
+                        font-weight: bold;
+                        font-size: 15px;
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+
+                .Row4__DeleteItemButton{
+                    height: 30px;
+                    width: 130px;
+                    border-radius: 10px;
+                    position: relative;
+                    bottom: 15px;
+                    left: 43px;
+                    border: solid black 2px;
+                    background-color: rgba(236, 72, 51, 0.996);
+                    cursor: pointer;
+
+                    .DeleteItemButton__Text{
+                        font-weight: bold;
+                        font-size: 15px;
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+
+                .Row4__ShoppingButton{
+                    height: 30px;
+                    width: 190px;
+                    border-radius: 10px;
+                    position: relative;
+                    bottom: 8px;
+                    left: 13px;
+                    border: solid black 2px;
+                    background-color: rgba(47, 235, 201, 0.735);
+                    cursor: pointer;
+
+                    .ShoppingButton__Text{
+                        font-weight: bold;
+                        font-size: 14px;
+                        color: rgb(0, 0, 0);
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+            }
+            //==========={ 𝐅𝐢𝐥𝐚 𝟒 𝐝𝐞 𝐥𝐚 𝐭𝐚𝐫𝐣𝐞𝐭𝐚 }===========
+        }
+        //==========={ Estilos de la tarjeta de presentación del producto }===========
+    }
+
+
+    .ContainerDetail__Section3{
+        grid-area: ContainerDetail__Section3;
+        background-color: map-get($ItemDetail, ContainerDetail__Section1and3);
+    }
+}
+
+//==========={ 𝐓𝐞𝐱𝐭𝐨 𝐝𝐞 𝐜𝐚𝐫𝐠𝐚𝐧𝐝𝐨... }===========
+.ContainerLoading{
+    height: 100vh;
+    width: 100%;
+
+    .ContainerLoading__TextLoading{
+        font-size: 40px;
+        margin-top: 70px;
+        text-align: center;
+    }
+}
+//==========={ 𝐓𝐞𝐱𝐭𝐨 𝐝𝐞 𝐜𝐚𝐫𝐠𝐚𝐧𝐝𝐨... }===========

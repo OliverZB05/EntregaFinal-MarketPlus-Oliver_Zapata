@@ -1,0 +1,19 @@
+@import "../../SASS/vars";
+
+//==============={ Estilo del Footer }===============
+    .StyleFooter{
+        height: 95px;
+        width: 100%;
+        background-color: black;
+
+        .StyleFooter__ContainerLogo{
+            height: 75px;
+            width: 400px;
+            background-image: url("../../../public/IMG/LogoFooterMarketPlus.png");
+            background-color: rgba(255, 0, 0, 0);
+            position: relative;
+            top: 10px;
+            left: 2px;
+        }
+    }
+//==============={ Estilo del Footer }===============

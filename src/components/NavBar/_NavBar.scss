@@ -1,0 +1,129 @@
+@import "../../SASS/vars";
+
+//==============={ Estilo del Navbar }===============
+.StyleNavbar{
+    height: 90px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(33, 110, 226) 20%, rgb(68, 177, 240));
+    display: flex;
+    justify-content: center;
+
+    .StyleNavbar__ContainerStyleNavbar{
+        height: 80px;
+        width: 98%;
+        background-color: rgba(0, 0, 0, 0);
+        position: relative;
+        top: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        .ContainerStyleNavbar__ContainerLogo{
+            height: 75px;
+            width: 300px;
+            background-image: url("../../../public/IMG/LogoHeaderMarketPlus.png");
+            background-color: rgba(255, 0, 0, 0);
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+//==============={ Estilo del Navbar }===============
+
+
+
+//==============={ Estilo de la sección abajo del navbar (donde dice categorías) }===============
+.SubNavbar{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(9, 93, 202);
+    display: flex;
+    justify-content: center;
+
+    .SubNavbar__ButtonCategories{
+        background-color: rgba(240, 248, 255, 0);
+
+        .ButtonCategories__Text{
+            color: white;
+            font-size: 25px;
+            font-weight: 3000;
+            text-shadow: 2px 3px 3px rgba(6, 12, 130, 0.467);
+        }
+    }
+
+    .SubNavbar__ButtonCategories:hover{
+        cursor: pointer;
+
+        .ButtonCategories__Text:hover{
+            color: rgb(222, 222, 222);
+            font-size: 25px;
+        }
+    }
+}
+//==============={ Estilo de la sección abajo del navbar (donde dice categorías) }===============
+
+
+
+//==============={ Estilo de la sección abajo del subnavbar (donde hace filtrado de categorías) }===============
+.ContainerCategories{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(55, 175, 231);
+    display: grid;
+    justify-content: center;
+
+    .FlexContainer{
+        display: flex;
+        justify-content: space-around;
+
+        .ContainerCategories__Buttons{
+            height: 50px;
+            width: 200px;
+            margin-top: 15px;
+            border-radius: 20px;
+            background-color: rgba(23, 108, 236, 0.479);
+            cursor: pointer;
+
+            .Buttons__Text{
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+
+        .ContainerCategories__Buttons:hover{
+            height: 50px;
+            width: 200px;
+            margin-top: 15px;
+            border-radius: 20px;
+            background-color: rgba(58, 135, 251, 0.591);
+            cursor: pointer;
+
+            .Buttons__Text:hover{
+                color: rgb(46, 46, 46);
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+//==============={ Estilo de la sección abajo del subnavbar (donde hace filtrado de categorías) }===============
+
+
+
+//==============={ Clases que hacen aparecer y desaparecer el ContainerCategories }===============
+.none{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+//==============={ Clases que hacen aparecer y desaparecer el ContainerCategories }===============
+
+
+
+
+
+
+
+
+

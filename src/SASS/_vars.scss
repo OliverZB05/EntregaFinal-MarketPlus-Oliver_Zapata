@@ -1,0 +1,144 @@
+// ========== 𝐌𝐢𝐱𝐢𝐧𝐬 ==========
+@mixin RowTitle{
+    font-size: 30px;
+    margin-top: 9px;
+    margin-left: 5px;
+    color: white;
+    text-shadow: 2px 3px 3px rgb(0, 0, 0);
+}
+
+@mixin Row2-Of-CardProducts{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+//========= {De CardsProducts} =========
+@mixin CardProduct{
+    height: 190px;
+    width: 160px;
+    margin-top: 13px;
+    position: relative;
+    left: 20px;
+    border-radius: 20px;
+    background-color: rgb(227, 226, 226);
+    border: solid rgb(75, 74, 74) 2px;
+    display: grid;
+    grid-template-areas: 
+    " CardProduct__ContainerIMG"
+    " CardProduct__ContainerText"
+    " CardProduct__ContainerButtonPay";
+    grid-template-rows: 100px 2fr 33px;
+}
+
+@mixin ContainerIMG{
+    grid-area: CardProduct__ContainerIMG;
+    background-color: map-get($ItemList, ContainerIMG);
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin ContainerText{
+    grid-area: CardProduct__ContainerText;
+    background-color: map-get($ItemList, ContainerText);
+}
+
+@mixin ContainerButtonPay{
+    grid-area: CardProduct__ContainerButtonPay;
+    background-color: map-get($ItemList, ContainerButtonPay);
+    display: flex;
+    justify-content: center;
+}
+
+@mixin ButtonPay{
+    height: 28px;
+    width: 60px;
+    border-radius: 20px;
+    margin-bottom: 3px;
+    background-color: rgb(12, 120, 227);
+    border: 2px solid black;
+}
+
+@mixin ButtonPay__Text{
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+@mixin ButtonPay__Texthover{
+    cursor: pointer;
+    background-color: rgb(38, 141, 244);
+}
+//========= {De CardsProducts} =========
+
+@mixin TitlesAlert{
+    font-size: 25px;
+    position: relative;
+    top: 5px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 7px rgba(1, 16, 45, 0.541);
+}
+
+@mixin TextsAlert{
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+
+@mixin TextsAlertQuantity{
+    font-size: 20px;
+    position: relative;
+    bottom: 19px;
+}
+
+
+//========= {De ShoppingCart} =========
+@mixin TopHalf1{
+    background-color: rgb(150, 149, 149);
+}
+
+@mixin BottomHalf1{
+    background-color: rgb(90, 89, 89);
+}
+
+@mixin TopHalf2{
+    background-color: rgb(189, 184, 184);
+}
+
+@mixin BottomHalf2{
+    background-color: rgba(90, 89, 89, 0.878);
+}
+//========= {De ShoppingCart} =========
+// ========== 𝐌𝐢𝐱𝐢𝐧𝐬 ==========
+
+
+
+// ========== 𝐌𝐚𝐩𝐬 ==========
+$ItemList:(   
+    Section1and3: rgb(118, 117, 117),
+    Section2: rgb(180, 177, 177),
+    Section1__row1: rgb(71, 67, 67),
+    Section1__row2: rgb(147, 150, 152),
+    ContainerIMG: rgb(0, 0, 255),
+    ContainerText: rgba(4, 247, 255, 0),
+    ContainerButtonPay: rgba(166, 0, 255, 0)
+);
+
+$ItemDetail:(
+    ContainerDetail: rgba(0, 179, 255, 0),
+    ContainerDetail__Section1and3: rgba(61, 134, 229, 0),
+    ContainerDetail__Section2: rgba(37, 205, 235, 0),
+    ContainerAlerts: rgba(152, 187, 202, 0.598),
+    Rows1and3: rgba(0, 255, 255, 0),
+    Rows2and4: rgba(0, 128, 255, 0),
+    Column1__RowSection1: rgba(255, 0, 0, 0),
+    Column1__RowSection2: rgba(143, 5, 5, 0),
+    Column2__RowSection1: rgba(0, 217, 255, 0),
+    Column2__RowSection2: rgba(5, 56, 143, 0),
+    Row4__SubRow1: rgba(211, 13, 211, 0),
+    Row4__SubRow2: rgba(128, 0, 128, 0)
+);
+// ========== 𝐌𝐚𝐩𝐬 ==========

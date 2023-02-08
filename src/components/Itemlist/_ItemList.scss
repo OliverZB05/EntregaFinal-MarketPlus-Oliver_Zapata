@@ -1,0 +1,573 @@
+@import "../../SASS/vars";
+
+.ContainerSections{
+    height: 890px;
+    width: 100%;
+    background-color: rgba(119, 116, 116, 0);
+    display: grid;
+    grid-template-areas: 
+    " ContainerSections__Section1"
+    " ContainerSections__Section2"
+    " ContainerSections__Section3";
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+
+//==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+    .ContainerSections__Section1{
+        grid-area: ContainerSections__Section1;
+        background-color: map-get($ItemList, Section1and3);
+        display: grid;
+        grid-template-areas: 
+        " Section1__row1"
+        " Section1__row2";
+        grid-template-rows: 1fr 4fr;
+
+        .Section1__row1{
+            grid-area: Section1__row1;
+            background-color: map-get($ItemList, Section1__row1);
+
+            .row1__RowTitle{
+                @include RowTitle;
+            }
+        }
+
+        .Section1__row2{
+            grid-area: Section1__row2;
+            background-color: map-get($ItemList, Section1__row2);
+            @include Row2-Of-CardProducts;
+
+            //=============={ CardProduct }==============
+            .ContainerCardMaster_1{
+                display: flex;
+
+                .ContainerCards{
+                    padding-left: 10px;
+                    padding-right: 5px;
+                    padding-bottom: 13px;
+                    position: relative;
+                    right: 20px;
+
+                .ContainerCards__CardProduct{
+                    @include CardProduct;
+
+                    .CardProduct__ContainerIMG{
+                        @include ContainerIMG;
+                    }
+
+                    .CardProduct__ContainerText{
+                        @include ContainerText;
+
+                        .ContainerText__Text1{
+                            font-size: 17px;
+                            margin-left: 5px;
+                        }
+
+                        .ContainerText__Text2{
+                            font-size: 18px;
+                            margin-left: 5px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .CardProduct__ContainerButtonPay{
+                        @include ContainerButtonPay;
+
+                        .ContainerButtonPay__ButtonPay{
+                            @include ButtonPay;
+
+                            .ButtonPay__Text{
+                                @include ButtonPay__Text;
+                            }
+                        }
+
+                        .ContainerButtonPay__ButtonPay:hover{
+                            @include ButtonPay__Texthover
+                        }
+                    }
+                }
+
+                }
+            }
+
+            .ContainerCardMaster1_NONE{
+                display: none;
+            }
+            //=============={ CardProduct }==============
+        }
+    }
+//==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+
+
+
+//==========={ 𝐅𝐢𝐥𝐚 𝟐 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+    .ContainerSections__Section2{
+        grid-area: ContainerSections__Section2;
+        background-color: map-get($ItemList, Section2);
+        display: grid;
+        grid-template-areas: 
+        " Section2__row1"
+        " Section2__row2";
+        grid-template-rows: 1fr 4fr;
+
+        .Section2__row1{
+            grid-area: Section2__row1;
+            background-color: map-get($ItemList, Section1__row1);
+
+            .row1__RowTitle{
+                @include RowTitle;
+            }
+        }
+
+        .Section2__row2{
+            grid-area: Section2__row2;
+            background-color: map-get($ItemList, Section1__row2);
+            @include Row2-Of-CardProducts;
+
+            //=============={ CardProduct }==============
+            .ContainerCardMaster_2{
+                display: flex;
+
+                .ContainerCards{
+                    padding-left: 10px;
+                    padding-right: 5px;
+                    padding-bottom: 13px;
+                    position: relative;
+                    right: 20px;
+
+                .ContainerCards__CardProduct{
+                    @include CardProduct;
+
+                    .CardProduct__ContainerIMG{
+                        @include ContainerIMG;
+                    }
+
+                    .CardProduct__ContainerText{
+                        @include ContainerText;
+
+                        .ContainerText__Text1{
+                            font-size: 17px;
+                            margin-left: 5px;
+                        }
+
+                        .ContainerText__Text2{
+                            font-size: 18px;
+                            margin-left: 5px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .CardProduct__ContainerButtonPay{
+                        @include ContainerButtonPay;
+
+                        .ContainerButtonPay__ButtonPay{
+                            @include ButtonPay;
+
+                            .ButtonPay__Text{
+                                @include ButtonPay__Text;
+                            }
+                        }
+
+                        .ContainerButtonPay__ButtonPay:hover{
+                            @include ButtonPay__Texthover
+                        }
+                    }
+                }
+
+                }
+            }
+
+            .ContainerCardMaster2_NONE{
+                display: none;
+            }
+            //=============={ CardProduct }==============
+        }
+    }
+//==========={ 𝐅𝐢𝐥𝐚 𝟐 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+
+
+
+//==========={ 𝐅𝐢𝐥𝐚 𝟑 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+    .ContainerSections__Section3{
+        grid-area: ContainerSections__Section3;
+        background-color: map-get($ItemList, Section1and3);
+        display: grid;
+        grid-template-areas: 
+        " Section3__row1"
+        " Section3__row2";
+        grid-template-rows: 1fr 3fr;
+
+        .Section3__row1{
+            grid-area: Section3__row1;
+            background-color: map-get($ItemList, Section1__row1);
+
+            .row1__RowTitle{
+                font-size: 30px;
+                margin-top: 15px;
+                margin-left: 5px;
+                color: white;
+                text-shadow: 2px 3px 3px rgb(0, 0, 0);
+            }
+        }
+
+        .Section3__row2{
+            grid-area: Section3__row2;
+            background-color: map-get($ItemList, Section1__row2);
+            @include Row2-Of-CardProducts;
+
+            //=============={ CardProduct }==============
+            .ContainerCardMaster_3{
+                display: flex;
+
+                .ContainerCards{
+                    padding-left: 10px;
+                    padding-right: 5px;
+                    padding-bottom: 13px;
+                    position: relative;
+                    right: 20px;
+
+                .ContainerCards__CardProduct{
+                    @include CardProduct;
+
+                    .CardProduct__ContainerIMG{
+                        @include ContainerIMG;
+                    }
+
+                    .CardProduct__ContainerText{
+                        @include ContainerText;
+
+                        .ContainerText__Text1{
+                            font-size: 17px;
+                            margin-left: 5px;
+                        }
+
+                        .ContainerText__Text2{
+                            font-size: 18px;
+                            margin-left: 5px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .CardProduct__ContainerButtonPay{
+                        @include ContainerButtonPay;
+
+                        .ContainerButtonPay__ButtonPay{
+                            @include ButtonPay;
+
+                            .ButtonPay__Text{
+                                @include ButtonPay__Text;
+                            }
+                        }
+
+                        .ContainerButtonPay__ButtonPay:hover{
+                            @include ButtonPay__Texthover
+                        }
+                    }
+                }
+
+                }
+            }
+
+            .ContainerCardMaster3_NONE{
+                display: none;
+            }
+            //=============={ CardProduct }==============
+        }
+    }
+//==========={ 𝐅𝐢𝐥𝐚 𝟑 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+}
+
+
+
+.ContainerSectionsFilter{
+    height: 89vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    " ContainerSections__Section1";
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+
+    //==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+    .ContainerSections__Section1{
+        grid-area: ContainerSections__Section1;
+        display: grid;
+        grid-template-areas: 
+        " Section1__row1";
+        grid-template-rows: 60px;
+
+        .Section1__row1{
+            grid-area: Section1__row1;
+            background-color: map-get($ItemList, Section1__row1);
+
+            .row1__RowTitle{
+                @include RowTitle;
+            }
+        }
+
+            //=============={ CardProduct }==============
+            .ContainerCardMaster_1{
+                display: flex;
+                background-color: rgba(255, 0, 0, 0);
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 28px;
+
+                .ContainerCards{
+                    padding-left: 10px;
+                    padding-right: 5px;
+                    padding-bottom: 13px;
+                    position: relative;
+                    right: 20px;
+
+                .ContainerCards__CardProduct{
+                    @include CardProduct;
+
+                    .CardProduct__ContainerIMG{
+                        @include ContainerIMG;
+                    }
+
+                    .CardProduct__ContainerText{
+                        @include ContainerText;
+
+                        .ContainerText__Text1{
+                            font-size: 17px;
+                            margin-left: 5px;
+                        }
+
+                        .ContainerText__Text2{
+                            font-size: 18px;
+                            margin-left: 5px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .CardProduct__ContainerButtonPay{
+                        @include ContainerButtonPay;
+
+                        .ContainerButtonPay__ButtonPay{
+                            @include ButtonPay;
+
+                            .ButtonPay__Text{
+                                @include ButtonPay__Text;
+                            }
+                        }
+
+                        .ContainerButtonPay__ButtonPay:hover{
+                            @include ButtonPay__Texthover
+                        }
+                    }
+                }
+
+                }
+            }
+
+            .ContainerCardMaster1_NONE{
+                display: none;
+            }
+            //=============={ CardProduct }==============
+    }
+//==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+}
+
+@media(max-width: 1074px){
+    .ContainerSectionsFilter{
+        height: 750px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        " ContainerSections__Section1";
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 20px;
+        overflow-x: hidden;
+    
+        //==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+        .ContainerSections__Section1{
+            grid-area: ContainerSections__Section1;
+            display: grid;
+            grid-template-areas: 
+            " Section1__row1";
+            grid-template-rows: 60px;
+    
+            .Section1__row1{
+                grid-area: Section1__row1;
+                background-color: map-get($ItemList, Section1__row1);
+    
+                .row1__RowTitle{
+                    @include RowTitle;
+                }
+            }
+    
+                //=============={ CardProduct }==============
+                .ContainerCardMaster_1{
+                    display: flex;
+                    background-color: rgba(255, 0, 0, 0);
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 28px;
+    
+                    .ContainerCards{
+                        padding-left: 10px;
+                        padding-right: 5px;
+                        padding-bottom: 13px;
+                        position: relative;
+                        right: 20px;
+    
+                    .ContainerCards__CardProduct{
+                        @include CardProduct;
+    
+                        .CardProduct__ContainerIMG{
+                            @include ContainerIMG;
+                        }
+    
+                        .CardProduct__ContainerText{
+                            @include ContainerText;
+    
+                            .ContainerText__Text1{
+                                font-size: 17px;
+                                margin-left: 5px;
+                            }
+    
+                            .ContainerText__Text2{
+                                font-size: 18px;
+                                margin-left: 5px;
+                                margin-top: 5px;
+                            }
+                        }
+    
+                        .CardProduct__ContainerButtonPay{
+                            @include ContainerButtonPay;
+    
+                            .ContainerButtonPay__ButtonPay{
+                                @include ButtonPay;
+    
+                                .ButtonPay__Text{
+                                    @include ButtonPay__Text;
+                                }
+                            }
+    
+                            .ContainerButtonPay__ButtonPay:hover{
+                                @include ButtonPay__Texthover
+                            }
+                        }
+                    }
+    
+                    }
+                }
+    
+                .ContainerCardMaster1_NONE{
+                    display: none;
+                }
+                //=============={ CardProduct }==============
+        }
+    //==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+    }
+}
+
+@media(max-width: 865px){
+    .ContainerSectionsFilter{
+        height: 750px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        " ContainerSections__Section1";
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 20px;
+        overflow-x: hidden;
+    
+        //==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+        .ContainerSections__Section1{
+            grid-area: ContainerSections__Section1;
+            display: grid;
+            grid-template-areas: 
+            " Section1__row1";
+            grid-template-rows: 60px;
+    
+            .Section1__row1{
+                grid-area: Section1__row1;
+                background-color: map-get($ItemList, Section1__row1);
+    
+                .row1__RowTitle{
+                    @include RowTitle;
+                }
+            }
+    
+                //=============={ CardProduct }==============
+                .ContainerCardMaster_1{
+                    display: flex;
+                    background-color: rgba(255, 0, 0, 0);
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 28px;
+    
+                    .ContainerCards{
+                        padding-left: 10px;
+                        padding-right: 5px;
+                        padding-bottom: 13px;
+                        position: relative;
+                        right: 20px;
+    
+                    .ContainerCards__CardProduct{
+                        @include CardProduct;
+    
+                        .CardProduct__ContainerIMG{
+                            @include ContainerIMG;
+                        }
+    
+                        .CardProduct__ContainerText{
+                            @include ContainerText;
+    
+                            .ContainerText__Text1{
+                                font-size: 17px;
+                                margin-left: 5px;
+                            }
+    
+                            .ContainerText__Text2{
+                                font-size: 18px;
+                                margin-left: 5px;
+                                margin-top: 5px;
+                            }
+                        }
+    
+                        .CardProduct__ContainerButtonPay{
+                            @include ContainerButtonPay;
+    
+                            .ContainerButtonPay__ButtonPay{
+                                @include ButtonPay;
+    
+                                .ButtonPay__Text{
+                                    @include ButtonPay__Text;
+                                }
+                            }
+    
+                            .ContainerButtonPay__ButtonPay:hover{
+                                @include ButtonPay__Texthover
+                            }
+                        }
+                    }
+    
+                    }
+                }
+    
+                .ContainerCardMaster1_NONE{
+                    display: none;
+                }
+                //=============={ CardProduct }==============
+        }
+    //==========={ 𝐅𝐢𝐥𝐚 𝟏 𝐝𝐞 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨𝐬 }===========
+    }
+}
+
+
+//==========={ 𝐓𝐞𝐱𝐭𝐨 𝐝𝐞 𝐜𝐚𝐫𝐠𝐚𝐧𝐝𝐨... }===========
+.ContainerLoading{
+    height: 100vh;
+    width: 100%;
+
+    .ContainerLoading__TextLoading{
+        font-size: 40px;
+        margin-top: 70px;
+        text-align: center;
+    }
+}
+//==========={ 𝐓𝐞𝐱𝐭𝐨 𝐝𝐞 𝐜𝐚𝐫𝐠𝐚𝐧𝐝𝐨... }===========

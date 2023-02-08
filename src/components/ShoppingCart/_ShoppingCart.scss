@@ -1,0 +1,218 @@
+@import "../../SASS/vars";
+
+.ContainerShoppingCart{
+    height: auto;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0);
+
+    .ContainerShoppingCart__FlexContainerCart1{
+        display: flex;
+        justify-content: center;
+
+        .FlexContainerCart1__ContainerTitle{
+            height: 80px;
+            width: 500px;
+            background-color: rgb(7, 107, 206);
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            .ContainerTitle__Title{
+                font-size: 35px;
+                color: white;
+                margin-top: 13px;
+            }
+        }
+    }
+    
+    .ContainerShoppingCart__FlexContainerCart2{
+        display: grid;
+        justify-content: center;
+        margin-top: 20px;
+
+
+        .FlexContainerCart2__TableProducts{
+            width: 800px;
+            height: 21vh;
+            margin-bottom: 20px;
+
+
+            //========{ Columna de enumeración }========
+            .TableProducts__NumberingColumn{
+                width: 20px;
+                padding: 9px;
+                background-color: gray;
+                border: solid black;
+                border-top-width: 3px;
+                border-right-width: 3px;
+                border-bottom-width: 3px;
+                border-left-width: 3px;
+            }
+            //========{ Columna de enumeración }=======
+
+            //========{ Fila de título }=======
+            .TableProducts__FirstRow{
+                height: 60px;
+                background-color: white;
+                border: solid black;
+                border-top-width: 3px;
+                border-right-width: 3px;
+                border-bottom-width: 3px;
+                border-left-width: 0px;
+
+
+                .FirstRow__Text{
+                    font-size: 30px;
+                }
+            }
+            //========{ Fila de título }=======
+
+            .TableProducts__SecondRow{
+                height: 60px;
+                display: grid;
+                grid-template-areas: 
+                " SecondRow__td1  SecondRow__td2  SecondRow__td3";
+                grid-template-columns: 1fr 1fr 1fr;
+                
+                .SecondRow__td1{
+                    @include TopHalf1;
+                    grid-area: SecondRow__td1;
+                    border: solid black;
+                    border-top-width: 0px;
+                    border-right-width: 3px;
+                    border-bottom-width: 3px;
+                    border-left-width: 0px;
+                }
+
+                .SecondRow__td2{
+                    @include TopHalf2;
+                    grid-area: SecondRow__td2;
+                    border: solid black;
+                    border-top-width: 0px;
+                    border-right-width: 3px;
+                    border-bottom-width: 3px;
+                    border-left-width: 0px;
+                }
+
+                .SecondRow__td3{
+                    @include TopHalf1;
+                    grid-area: SecondRow__td3;
+                    border: solid black;
+                    border-top-width: 0px;
+                    border-right-width: 3px;
+                    border-bottom-width: 3px;
+                    border-left-width: 0px;
+                }
+            }
+
+            .TableProducts__ThirdRow{
+                height: 60px;
+                display: grid;
+                grid-template-areas: 
+                " ThirdRow__td1  ThirdRow__td2  ThirdRow__td3";
+                grid-template-columns: 1fr 1fr 1fr;
+
+                .ThirdRow__td1{
+                    @include BottomHalf1;
+                    grid-area: ThirdRow__td1;
+                    border: solid black;
+                    border-top-width: 0px;
+                    border-right-width: 3px;
+                    border-bottom-width: 3px;
+                    border-left-width: 0px;
+                }
+
+                .ThirdRow__td2{
+                    @include BottomHalf2;
+                    grid-area: ThirdRow__td2;
+                    border: solid black;
+                    border-top-width: 0px;
+                    border-right-width: 3px;
+                    border-bottom-width: 3px;
+                    border-left-width: 0px;
+                }
+
+                .ThirdRow__td3{
+                    @include BottomHalf1;
+                    grid-area: ThirdRow__td3;
+                    border: solid black;
+                    border-top-width: 0px;
+                    border-right-width: 3px;
+                    border-bottom-width: 3px;
+                    border-left-width: 0px;
+                }
+            }
+        
+        }
+
+
+        .FlexContainerCart2__SubFlexContainer3{
+            display: flex;
+            justify-content: center;
+
+        .SubFlexContainer3__ContainerTotalPrice{
+            height: 60px;
+            width: 600px;
+            border: solid rgba(0, 0, 0, 0.651) 3px;
+            border-radius: 20px;
+            background-image: linear-gradient(to top, rgba(129, 131, 133, 0.466), rgb(172, 172, 172));
+            position: relative;
+            bottom: 15px;
+            display: grid;
+            grid-template-areas: 
+            " Column1TotalPrice Column2TotalPrice" ;
+            grid-template-columns: 200px 390px;
+
+            .Column1TotalPrice{
+                grid-area: Column1TotalPrice;
+                background-color: rgba(255, 0, 0, 0);
+
+                .TemplateTotalPrice__Text-1{
+                    font-size: 25px;
+                    margin-top: 12px;
+                    margin-left: 7px;
+                    text-align: left;
+                }
+            }
+
+            .Column2TotalPrice{
+                grid-area: Column2TotalPrice;
+                background-color: rgba(0, 153, 255, 0);
+
+                .TemplateTotalPrice__Text-2{
+                    font-size: 25px;
+                    margin-top: 12px;
+                    margin-left: 280px;
+                    text-align: left;
+                }
+            }
+        }
+        }
+    
+        .FlexContainerCart2__SubFlexContainer4{
+            display: flex;
+            justify-content: center;
+
+        .SubFlexContainer4__GoToCheckout{
+            height: 40px;
+            width: 190px;
+            border-radius: 30px;
+            position: relative;
+            bottom: 5px;
+            border: solid black 2px;
+            background-color: rgba(47, 235, 201, 0.735);
+            cursor: pointer;
+
+            .GoToCheckout__Text{
+                font-weight: bold;
+                font-size: 16px;
+                color: rgb(0, 0, 0);
+                position: relative;
+                top: 1px;
+            }
+        }
+        }
+    }
+
+}

@@ -1,0 +1,38 @@
+@import "../../../../SASS/vars";
+
+.CartWidget{
+    height: 60px;
+    width: 150px;
+    background-color: rgba(189, 187, 187, 0.716);
+    margin-top: 8px;
+    border-radius: 20px;
+    border: solid black 2px;
+    display: grid;
+    grid-template-areas: "CartContainer__Colmn1 CartContainer__Colmn2";
+    grid-template-columns: 1fr 1fr;
+
+    .CartWidget__Colmn1{
+        grid-area: CartContainer__Colmn1;
+        background-color: rgba(196, 196, 197, 0);
+
+        .Colmn1__IMG{
+            height: 49px;
+            width: 49px;
+            margin-top: 6px;
+            margin-left: 8px;
+        }
+    }
+    
+    .CartWidget__Colmn2{
+        grid-area: CartContainer__Colmn2;
+        background-color: rgba(148, 148, 148, 0);
+
+        .Colmn2__Text{
+            font-size: 35px;
+            position: relative;
+            top: 3px;
+            left: 25px;
+            color: black;
+        }
+    }
+}

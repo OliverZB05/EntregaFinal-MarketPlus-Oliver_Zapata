@@ -68,5 +68,6 @@ Los estilos de la página están hechos mediante SASS, el cual se puede instalar
 ![Manejo de cantidades, precios y stock](https://user-images.githubusercontent.com/106617284/217629818-65ab8066-aac8-4f4b-b04e-54bbcd0afeab.gif)
 
 - ### Carrito de compras
+![Carrito de compras](https://user-images.githubusercontent.com/106617284/217631976-5625092e-f3a4-4aa0-8528-4d4eb39a1163.gif)
 
 - ### Enviar orden de compra

@@ -1,13 +1,13 @@
 # MarketPlus
 
 ## Introducción
-Este es un proyecto Ecommerce hecho en React en el cual se puede tener una buena interacción de usuario con una gran variedad de lógica de programación como pueden ser:
+Este es un proyecto ecommerce hecho en React en el cual se puede tener una buena interacción de usuario con una gran variedad de lógica de programación como pueden ser:
 - Almacenamiento de productos en un carrito de compras
 - Manejo de cantidad, precio, stock y categorías de cada producto
 - Buena navegabilidad entre componentes
-- Lógica para enviar una orden de compra que se recibe desde firestore, sección perteneciente al servicio de firebase, entre otras funcionalidades.
+- Lógica para enviar una orden de compra que se recibe desde firestore (sección perteneciente al servicio de firebase), entre otras funcionalidades.
 
-Principalmente este proyecto fue realizado con la finalidad de simular una página Ecommerce de compras online como y brindar al usuario la expeciencia de escoger un producto de su agrado y configurando a su preferencia el manejo de sus productos elegidos, con una interfaz fácil de entender y atajos que hacen más fácil el trabajo de interacción para el cliente.
+Principalmente este proyecto fue realizado con la finalidad de simular una página ecommerce y brindar al usuario la expeciencia de escoger un producto de su agrado y configurar a su preferencia el manejo de los productos elegidos, con una interfaz fácil de entender y atajos que hacen más fácil el trabajo de interacción para el usuario.
 
 
 ## Como iniciar el proyecto
@@ -21,10 +21,10 @@ Principalmente este proyecto fue realizado con la finalidad de simular una pági
 En el archivo "App.jsx" en la ruta "./src/App.jsx" se puede ver la estructura principal de la página web, mostrando las importaciones más destacadas y de mayor importancia y el manejo de rutas de la aplicación hecho mediante react-router-dom. Algunos componentes a destacar de la web son:
 
 - ### ItemListContainer y ItemDetailContainer
-Se encargan del filtrado de productos, ItemListContainer para varios productos y filtrar por categorías e ItemDetailContainer para el producto seleccionado en la compra.
+Se encargan del filtrado de productos, ItemListContainer para varios productos y filtrar por categorías e ItemDetailContainer para filtrar el producto seleccionado en la compra.
 
 - ### CartProvider y CheckoutProvider
-Estás funciones vienen son importadas desde contexts que contiene la web en la carpeta context (ubicada en la ruta "./src/components/Context"), cada uno de ellos cumplen diferentes papeles en diferentes áreas.
+Estás funciones son importadas desde contexts que contiene la web en la carpeta context (ubicada en la ruta "./src/components/Context"), cada uno de ellos cumplen diferentes papeles en diferentes áreas.
 
 - CartProvider
 Se encarga del manejo del "ShoppingCart.jsx", archivo en donde se encuentra la lógica del carrito de compras.
@@ -36,27 +36,33 @@ Cumple un papel importante en el manejo del "Checkout.jsx", archivo donde está 
 El proyecto contiene hooks personalizados que cumplen la función de optimizar y facilitar la legibilidad del código y cumpliendo un papel importante en el mismo, entre ellos están:
 
 - useAsync
-Cumple un papel fundamental en al filtrar y mostrar de productos,
+Cumple un papel fundamental al filtrar y mostrar de productos.
 
 - useTitle
 Este es para cambiar el título de la página dependiendo de en que ruta se encuentre el usuario.
 
 
 - ### Servicios
-La configuración de los servicios más usados (firebase y firestore) se encuentra en la ruta "./src/services". En el documento "FirebaseConfig.jsx" se podrán poner las variables de entorno para así visualizar los productos.
+La configuración de los servicios más usados (firebase y firestore) se encuentra en la ruta "./src/services". En el documento "FirebaseConfig.jsx" se podrán poner las variables de entorno para así visualizar los productos, esto reemplazando el contenido del objeto firebaseConfig con las variables de entorno y en la carpeta de firestore se encontrarán dos archivos:
+
+- products
+Que se encarga de la lógica de ItemListContainer
+
+- SingularProduct
+Que se encarga de la lógica de ItemDetailContainer
 
 - ### Adaptadores
 Se encuentran en la ruta "./src/adapters", en este proyecto solo hay un adaptador que es "productAdapter.jsx" que se encarga de traer solo los datos más importantes de los productos almacenados en el backend de firebase.
 
-- ### Dato importante: algunos componentes pueden tener subcomponentes o "subcomponents" los cuales son componentes hijos del componente principal y que pueden ser imporntantes para que funcione la web.
+- ### Dato importante: algunos componentes pueden tener subcomponentes o "subcomponents" los cuales son componentes hijos del componente principal y que pueden ser importantes para que funcione la web.
 
 
 ##  Estilos de la web
 Los estilos de la página están hechos mediante SASS, el cual se puede instalar en las dependencias de la página.
 
-- ### 1. Dato importante: algunos componentes tienen en su carpeta hojas de estilo ".scss" las cuales tienen el estilo de cada componente y todas las rutas de esos estilos se muestrán en la página mediante el archivo "style.scss" encontrado en la ruta "./src/SASS".
+- # 1. Dato importante: algunos componentes tienen en su carpeta hojas de estilos ".scss" las cuales tienen el estilo de cada componente y todos esos estilos se muestrán en la página mediante el archivo "style.scss" encontrado en la ruta "./src/SASS" y que posee los estilos generales de la página.
 
-- ### 2. Dato importante: en la carpeta ubicada en "./src/SASS" también se podra ver una carpeta llamada "_vars.scss", la cual contiene los mixins y maps de cada cada hoja de estilos, es decir que todas las hojas de estilos de todos los componentes que las contienen importan los mixins y maps del archivo "_vars.scss".
+- # 2. Dato importante: en la carpeta SASS ubicada en "./src/SASS" también se podra ver un archivo llamada "_vars.scss", el cual contiene los mixins y maps (herramientas de SASS) de cada cada hoja de estilos, es decir que todas las hojas de estilos de todos los componentes que las contienen importan los mixins y maps del archivo "_vars.scss".
 
 
 ## Manejo de interfaz

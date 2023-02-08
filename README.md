@@ -13,7 +13,7 @@ Principalmente este proyecto fue realizado con la finalidad de simular una pági
 ## Como iniciar el proyecto
 - Clonar el repositorio
 - Instalar las dependencias presentes en el archivo "package.json" en la ruta "./package.json"
-- Configurar variables de entorno presentes en el archivo "firebaseConfig.jsx" y reemplazarlas por las del archivo ".env" (archivo privado)
+- Configurar variables de entorno presentes en el archivo "firebaseConfig.jsx" colocando el archivo ".env" (archivo privado) en carpeta principal del proyecto, fuera de carpetas como "src", "public" o "node_modules"
 - Ejecutar el comando de consola npm start
 
 
